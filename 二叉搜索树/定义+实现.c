@@ -25,6 +25,9 @@ int* ascending order(int *nums, int numsSize){
 }
 
 struct TreeNode* searchTree(int *nums, int right, int left){
+    if(left > right){
+      return NULL;
+    }
    //得是升序数组
    int mid = (right + left) / 2;
    TreeNode* root = (TreeNode*)malloc(sizeof(TreeNode));
